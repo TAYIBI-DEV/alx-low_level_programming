@@ -1,7 +1,7 @@
 #include<stdio.h>
 /**
- *main - Entry point
- *Retun: Always 0 (Success)
+ * main - Entry point size of various
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
