@@ -1,7 +1,10 @@
 #include<stdio.h>
-int main()
+/**
+ *main - is the entry point of a program
+ *return retur always 0
+ */
+int main(void)
 {
-	char str[] = "Programming is like building a multilingual puzzle";
-	puts(str);
-	return 0;
+	puts("\"Programming is like building a multilingual puzzle");
+	return (0);
 }
