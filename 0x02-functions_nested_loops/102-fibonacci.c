@@ -6,7 +6,7 @@
 */
 int main(void)
 {
-	int  opt, i, j, k;
+	unsigned long  opt, i, j, k;
 
 	i = 0;
 	j = 1;
@@ -15,7 +15,7 @@ int main(void)
 		k = i + j;
 		i = j;
 		j = k;
-		printf("%d", k);
+		printf("%lu", k);
 		if (opt == 49)
 			putchar('\n');
 		else
