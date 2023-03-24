@@ -9,7 +9,7 @@ int main(void)
 {
 	long int n;
 	long int prime;
-	int i;
+	long int i;
 
 	n = 612852475143;
 	prime = -1;
@@ -27,7 +27,7 @@ int main(void)
 			n = n / i;
 		}
 	}
-	if (n < 2)
+	if (n > 2)
 		prime = n;
 	printf("%ld\n", prime);
 	return (0);
