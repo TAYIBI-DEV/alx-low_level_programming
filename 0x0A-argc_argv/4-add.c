@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * is_valid_number - The Function
- * @s:  The variable
+ * is_digit - Function check
+ * @s: string
  * Return: The Return value/void
  */
 
@@ -31,7 +31,7 @@ int i = 0;
  * Return: always 0 success
  */
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 	int i, sum = 0;
 
@@ -42,12 +42,13 @@ int main(int argc, char **argv)
 	}
 	for (i = 1; i < argc; i++)
 	{
+
 		if (!is_digit(argv[i]))
-			{
-				printf("Error\n");
-				return (1);
-			}
-		if (argc > 1)
+		{
+			printf("Error\n");
+			return (1);
+		}
+		else
 			sum += atoi(argv[i]);
 	}
 	printf("%d\n", sum);
