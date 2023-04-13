@@ -32,7 +32,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (size == 0 || nmemb == 0)
 		return (NULL);
-	p = malloc(sizeof(int) * nmemb);
+	p = malloc(sizeof(int) * nmemb + 1);
 
 	if (p == 0)
 		return (NULL);
