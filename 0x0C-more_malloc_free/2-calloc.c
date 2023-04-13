@@ -1,6 +1,26 @@
 #include "main.h"
 
 /**
+ * _memset - function that fills memory with b
+ * @s: pointer
+ * @b: char
+ * @n: int
+ * Return: pointer s
+ */
+
+char _memset(char *s, char b, unsigned int n)
+{
+	char *p;
+
+	p = s;
+	while (n--)
+		*s++ = b;
+
+	return (p);
+}
+
+
+/**
  * _calloc - function that allocates memory
  * @nmemb: int
  * @size: int
@@ -9,7 +29,7 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *p;
+	int *p;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
@@ -17,6 +37,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (p == 0)
 		return (NULL);
-	memset(p, 0, sizeof(int) * nmemb);
+	_memset(p, 0, sizeof(int) * nmemb);
 	return (p);
 }
