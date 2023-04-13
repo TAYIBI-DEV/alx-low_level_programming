@@ -1,25 +1,6 @@
 #include "main.h"
 
 /**
- * _memset - function that fills memory with b
- * @s: pointer
- * @b: char
- * @n: int
- * Return: pointer s
- */
-
-char *_memset(char *s, char b, unsigned int n)
-{
-	char *ptr = s;
-
-	while (n--)
-		*s++ = b;
-
-	return (ptr);
-}
-
-
-/**
  * _calloc - function that allocates memory
  * @nmemb: int
  * @size: int
@@ -32,14 +13,14 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (size == 0 || nmemb == 0)
 		return (NULL);
-	p = malloc(sizeof(int) * nmemb);
+	p = malloc(size * nmemb);
 
 	if (p == 0)
 	{
 		return (NULL);
 	}
 	else
-		_memset(p, 0, sizeof(int) * nmemb);
+		memset(p, 0, size * nmemb);
 
 	return (p);
 }
