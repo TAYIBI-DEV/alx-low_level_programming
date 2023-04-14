@@ -38,11 +38,11 @@ int _strlen(char *s)
 char *big_multiply(char *s1, char *s2)
 {
 	char *r;
-	int l1, l2, a, b, c, x;
+	int l1, l2, a, b, c;
 
 	l1 = _strlen(s1);
 	l2 = _strlen(s2);
-	r = malloc(a = x = l1 + l2);
+	r = malloc(l1 + l2);
 	if (!r)
 		printf("Error\n"), exit(98);
 	while (a--)
