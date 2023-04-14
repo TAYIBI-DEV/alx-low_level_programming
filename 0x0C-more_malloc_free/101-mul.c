@@ -15,8 +15,7 @@ char *big_multiply(char *s1, char *s2)
 
 	l1 = strlen(s1);
 	l2 = strlen(s2);
-	a = x = l1;
-	r = malloc(l1 + l2);
+	r = malloc(a = x = l1 + l2);
 	if (!r)
 		printf("Error\n"), exit(98);
 	while (a--)
