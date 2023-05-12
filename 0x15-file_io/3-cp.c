@@ -3,7 +3,7 @@
 #define USA "Usage: cp file_from file_to\n"
 #define NOREAD "Error: Can't read from file %s\n"
 #define NOWRITE "Error: Can't write to %s\n"
-#define NOCLOSE "Error: Can't close %d\n"
+#define NOCLOSE "Error: Can't close fd %d\n"
 #define PERMISSION (S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH)
 
 /**
@@ -31,7 +31,7 @@ int main(int ac, char **av)
 	while ((b = read(from_fd, buff, READ_BUF)) > 0)
 		if (write(to_fd, buff, b) != b)
 			dprintf(STDERR_FILENO, NOWRITE, av[2]), exit(99);
-	if (b < 0)
+	if (b == -1)
 		dprintf(STDERR_FILENO, NOREAD, av[1]), exit(98);
 
 	from_fd = close(from_fd);
